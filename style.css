@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.step {
+    padding: 10px;
+    border-radius: 5px;
+    color: gray;
+}
+
+.completed { color: green; font-weight: bold; }
+.active { color: blue; font-weight: bold; }
+
+.login-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.option {
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.contact-section { text-align: left; }
+
+.input-group, input, select {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
+.continue-btn {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.order-summary {
+    background-color: #d6f5c7;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+    width: 30%;
+    position: absolute;
+    top: 20px;
+    right: -40%;
+}
+
+.cancel-order {
+    float: right;
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.domain-name { font-weight: bold; font-size: 18px; }
+.order-details { font-size: 14px; }
+.order-price { font-size: 16px; font-weight: bold; }
+
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: green;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    display: none;
+    font-size: 16px;
+}
+
+.success-container { text-align: center; margin-top: 100px; }
+.success-container h1 { color: green; font-size: 28px; }
+.success-container p { font-size: 18px; color: #555; }
+
+.home-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.home-btn:hover { background-color: darkgreen; }

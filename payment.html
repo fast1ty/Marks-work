@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maksmine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="steps">
+            <span class="step completed">1 OTSI</span>
+            <span class="step completed">2 Kontaktandmed</span>
+            <span class="step active">3 Maksa</span>
+        </div>
+        <div class="payment-section">
+            <h2>Maksmine</h2>
+            <p>Kinnitage tellimus ja valige makseviis.</p>
+            <select>
+                <option>Visa / Mastercard</option>
+                <option>PayPal</option>
+                <option>Pangaülekanne</option>
+            </select>
+            <button class="pay-btn" onclick="confirmPayment()">Maksa</button>
+        </div>
+    </div>
+    <div id="payment-success" class="notification">💸 Payment has passed!</div>
+    <script src="script.js"></script>
+</body>
+</html>
