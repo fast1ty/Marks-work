@@ -1,30 +1,42 @@
 <!DOCTYPE html>
-<html lang="et">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maksmine</title>
+    <title>Payment Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div class="container">
-        <div class="steps">
-            <span class="step completed">1 OTSI</span>
-            <span class="step completed">2 Kontaktandmed</span>
-            <span class="step active">3 Maksa</span>
+        <header>
+            <h1>Website Title</h1>
+        </header>
+
+        <div class="step-container">
+            <div class="step-circle active">1</div>
+            <div class="step-circle active">2</div>
+            <div class="step-circle active">3</div>
         </div>
-        <div class="payment-section">
-            <h2>Maksmine</h2>
-            <p>Kinnitage tellimus ja valige makseviis.</p>
-            <select>
-                <option>Visa / Mastercard</option>
-                <option>PayPal</option>
-                <option>Pangaülekanne</option>
-            </select>
-            <button class="pay-btn" onclick="confirmPayment()">Maksa</button>
-        </div>
+
+        <main>
+            <h2>Payment Information</h2>
+            <form id="paymentForm">
+                <input type="text" id="cardNumber" placeholder="Card Number" required>
+                <input type="text" id="expiryDate" placeholder="Expiry Date (MM/YY)" required>
+                <input type="text" id="cvv" placeholder="CVV" required>
+                <div class="button-container">
+                    <button type="submit" id="submitPayment">Complete Payment</button>
+                </div>
+            </form>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Your Company</p>
+        </footer>
+
     </div>
-    <div id="payment-success" class="notification">💸 Payment has passed!</div>
+
     <script src="script.js"></script>
 </body>
 </html>
