@@ -1,44 +1,40 @@
 <!DOCTYPE html>
-<html lang="et">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Domeeni Otsing</title>
+    <title>Index Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
- 
+
     <div class="container">
-        <div class="steps">
-            <span class="step active">1 OTSI</span>
-            <span class="step">2 Kontaktandmed</span>
-            <span class="step">3 Maksa</span>
+        <header>
+            <h1>Website Title</h1>
+        </header>
+
+        <div class="step-container">
+            <div class="step-circle active">1</div>
+            <div class="step-circle">2</div>
+            <div class="step-circle">3</div>
         </div>
- 
-        <div class="search-section">
-            <input type="text" id="domainName" placeholder="Sisesta domeeninimi...">
-            <select id="domainExtension">
-                <option value=".ee">.ee</option>
-                <option value=".com">.com</option>
-                <option value=".net">.net</option>
-            </select>
-            <button class="search-btn" onclick="searchDomain()">Otsi</button>
-        </div>
- 
-        <div id="result" class="hidden">
-            <p class="available"><span id="domainResult"></span></p>
-            <button class="add-btn" onclick="proceedOrder()">+ Lisa</button>
-        </div>
- 
-        <div id="orderSummary" class="hidden">
-            <div class="order-box">
-                <h3>Tellimus</h3>
-                <p id="orderDetails"></p>
-            </div>
-            <button class="continue-btn" onclick="goToContactPage()">Jätka</button>
-        </div>
+
+        <main>
+            <h2>Enter Your Email</h2>
+            <form id="indexForm">
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <div class="button-container">
+                    <button type="submit" id="submitIndex" disabled>Next</button>
+                </div>
+            </form>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Your Company</p>
+        </footer>
+
     </div>
- 
+
     <script src="script.js"></script>
 </body>
 </html>
