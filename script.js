@@ -1,29 +1,47 @@
-function searchDomain() {
-    const fullDomain = document.getElementById("domainName").value + document.getElementById("domainExtension").value;
-    if (fullDomain) {
-        document.getElementById("domainResult").innerText = fullDomain;
-        document.getElementById("result").classList.remove("hidden");
-    }
-}
+document.addEventListener("DOMContentLoaded", () => {
+    // Index Page Logic
+    const submitIndex = document.getElementById("submitIndex");
+    const indexForm = document.getElementById("indexForm");
 
-function proceedOrder() {
-    document.getElementById("orderDetails").innerText = `Tellimus: ${document.getElementById("domainResult").innerText}`;
-    document.getElementById("orderSummary").classList.remove("hidden");
-}
+    // Enable "Next" button when form is valid
+    indexForm.addEventListener("input", () => submitIndex.disabled = !indexForm.checkValidity());
 
-function goToContactPage() {
-    window.location.replace("contact.html");
-}
+    // Handle form submission on index page
+    indexForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (indexForm.checkValidity()) {
+            window.location.href = "contact.html";  // Redirect to contact page
+        }
+    });
 
-function goToPaymentPage() {
-    window.location.replace("payment.html");
-}
+    // Contact Page Logic
+    const submitContact = document.getElementById("submitContact");
+    const contactForm = document.getElementById("contactForm");
 
-function confirmPayment() {
-    const notification = document.getElementById("payment-success");
-    notification.style.display = "block";
-    setTimeout(() => {
-        notification.style.display = "none";
-        window.location.replace("success.html");
-    }, 3000);
-}
+    // Enable "Next" button when form is valid
+    contactForm.addEventListener("input", () => submitContact.disabled = !contactForm.checkValidity());
+
+    // Handle form submission on contact page
+    contactForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (contactForm.checkValidity()) {
+            window.location.href = "payment.html";  // Redirect to payment page
+        }
+    });
+
+    // Payment Page Logic
+    const submitPayment = document.getElementById("submitPayment");
+    const paymentForm = document.getElementById("paymentForm");
+
+    // Enable "Complete Payment" button when form is valid
+    paymentForm.addEventListener("input", () => submitPayment.disabled = !paymentForm.checkValidity());
+
+    // Handle form submission on payment page
+    paymentForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (paymentForm.checkValidity()) {
+            alert("Payment Successful!");  // Show success message
+            window.location.href = "success.html";  // Redirect to success page
+        }
+    });
+});
