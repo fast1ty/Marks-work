@@ -1,27 +1,43 @@
 <!DOCTYPE html>
-<html lang="et">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontaktandmed</title>
+    <title>Contact Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div class="container">
-        <div class="steps">
-            <span class="step">1 OTSI</span>
-            <span class="step active">2 Kontaktandmed</span>
-            <span class="step">3 Maksa</span>
+        <header>
+            <h1>Website Title</h1>
+        </header>
+
+        <div class="step-container">
+            <div class="step-circle active">1</div>
+            <div class="step-circle active">2</div>
+            <div class="step-circle">3</div>
         </div>
-        <div class="contact-section">
-            <h2>Sisesta oma kontaktandmed</h2>
-            <input type="text" placeholder="Eesnimi">
-            <input type="text" placeholder="Perekonnanimi">
-            <input type="email" placeholder="E-mail">
-            <input type="password" placeholder="Salasõna">
-            <button class="continue-btn" onclick="goToPaymentPage()">Liigu edasi</button>
-        </div>
+
+        <main>
+            <h2>Contact Information</h2>
+            <form id="contactForm">
+                <div class="phone-container">
+                    <input type="tel" id="phone" placeholder="Phone Number (+1)" required pattern="^\+[0-9]{1,4}[0-9]{7,15}$" title="Please enter a valid phone number with country code">
+                </div>
+                <input type="text" id="address" placeholder="Address" required>
+                <div class="button-container">
+                    <button type="submit" id="submitContact">Next</button>
+                </div>
+            </form>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Your Company</p>
+        </footer>
+
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
